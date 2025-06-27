@@ -112,11 +112,36 @@
         height: 500px;
       }
       img#ilustration {
-        width: 306px;
+        width: 300px;
+        display: block;
+      }
+      h2 {
+        margin:10px 0px
       }
       #profile {
         margin: 30px 0px;
       }
+    }
+
+    @media screen and (max-height:500px){
+      section {
+        width: 400px;
+        height: 300px;
+      }
+
+      img#ilustration { 
+        width: 350px;
+        height: 50px;
+      }
+
+      h1 {
+        margin: 10px 0px;
+      }
+
+      #profile {
+        margin: 10px 0px;
+      }
+      
     }
   </style>
 </head>
@@ -124,7 +149,10 @@
 
   <section>
     <div id="cartao">
-      <img id="ilustration" src="assets/images/illustration-article.svg" alt="Ilustração Visual de Programação">
+      <picture>
+        <source media="(max-height:500px)" srcset="assets\images\illustrationp.png">
+        <img id="ilustration" src="assets/images/illustration-article.svg" alt="Ilustração Visual de Programação">
+      </picture>
       <h2 id="process">Learning</h2>
       <p id="date">Published 21 Dec 2023</p>
       <h1>HTML & CSS foundations</h1>
@@ -142,6 +170,6 @@
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/Luana-Brito-P" target="_blank">Luana Brito</a>.
-    </div>
+  </div>
 </body>
 </html>
